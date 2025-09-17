@@ -9,6 +9,10 @@ namespace ZooManagement
     internal class Lion: Animal, IFeedable
     {
         public bool IsAlpha { get; set; }
+        public Lion(string name, int age, bool isAlpha) : base(name, age)
+        {
+            IsAlpha = isAlpha;
+        }
         public override void MakeSound()
         {
             Console.WriteLine("Roar");

@@ -9,6 +9,10 @@ namespace ZooManagement
     internal class Parrot: Animal, IFeedable
     {
         public string Vocabulary { get; set; }
+        public Parrot(string name, int age, string vocabulary) : base(name, age)
+        {
+            Vocabulary = vocabulary;
+        }
         public override void MakeSound()
         {
             Console.WriteLine("Squawk");

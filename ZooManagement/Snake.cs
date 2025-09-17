@@ -9,6 +9,10 @@ namespace ZooManagement
     internal class Snake: Animal, IFeedable
     {
         public bool IsVenomous { get; set; }
+        public Snake(string name, int age, bool isVenomous) : base(name, age)
+        {
+            IsVenomous = isVenomous;
+        }
         public override void MakeSound()
         {
             Console.WriteLine("Hiss");
